@@ -48,7 +48,12 @@ public class ContentActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (data==null)
+        {
+            Toast.makeText(this, "Intent 为空拉" , Toast.LENGTH_LONG).show();
+            return;
 
+        }
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_CODE_GET_PIC_URI:
