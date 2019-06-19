@@ -16,17 +16,24 @@ public class WebOpenAppActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(this.getClass().getSimpleName(),"onCrete");
         setContentView(R.layout.activity_web_open_app);
         initView();
         init();
     }
 
     private void init() {
-        Intent intent = getIntent();
-        intent.getAction();
-        webmsssage.setText("从web界面获取到参数 "+intent.getAction()+"\r\n"+intent.getScheme());
-        webmsssage.append(intent.getDataString());
-        webmsssage.append(intent.getType());
+        try {
+
+            Intent intent = getIntent();
+            intent.getAction();
+            Log.e(this.getClass().getSimpleName(),"intent "+intent.getData());
+            webmsssage.setText("从web界面获取到参数 "+intent.getAction()+"\r\n"+intent.getScheme());
+            webmsssage.append(intent.getDataString());
+            webmsssage.append(intent.getType());
+        }catch (Exception ex){
+            Log.e(this.getClass().getSimpleName(),"ex "+ex.getMessage());
+        }
     }
 
     private void initView() {
