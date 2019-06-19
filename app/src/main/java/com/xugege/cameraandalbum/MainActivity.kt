@@ -5,6 +5,8 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.xugege.example.browsable_open_app.BrowActivity
+import com.xugege.example.browsable_open_app.WebOpenAppActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,12 +17,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openBrowsable(view: View) {
-        val intent =
-            Intent(Intent.ACTION_VIEW, Uri.parse("lzh://goods:8080/goodsDetail?goodsId=100100"))
-        startActivity(intent)
+        startActivity(Intent(this, BrowActivity::class.java))
     }
 
-    fun  next(view: View){
+    fun next(view: View) {
         startActivity(Intent(this, ContentActivity::class.java))
     }
 
