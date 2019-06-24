@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xugege.example.browsable_open_app">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
 
     <application>
+
+
         <activity android:name=".WebOpenAppActivity">
             <intent-filter>
 
@@ -10,6 +14,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="justdo23"
                     android:scheme="chai" />
@@ -31,9 +36,56 @@
                 scheme是一种跳转协议
                 -->
             </intent-filter>
+
+
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <data
+                    android:host="login"
+                    android:path="/loginActivity"
+                    android:port="8888"
+                    android:scheme="xl" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <!--协议部分，随便设置-->
+                <data
+                    android:host="login"
+                    android:path="/loginActivity"
+                    android:port="8888"
+                    android:scheme="xls" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!--注册scheme-->
+            <intent-filter>
+                <!--必有项-->
+                <action android:name="android.intent.action.VIEW"/>
+                <!--表示该页面可以被隐式调用，必须加上该项-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--BROWSABLE指定该Activity能被浏览器安全调用-->
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!--协议部分-->
+                <!--声明自定义scheme，类似于http, https-->
+                <data android:scheme="urlscheme"
+                    android:host="urldomain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="xugege"
+                    android:host="wdfull" />
+            </intent-filter>
         </activity>
-        <activity android:name=".BrowActivity">
-        </activity>
+        <activity android:name=".BrowActivity"></activity>
     </application>
 
 </manifest>

@@ -22,6 +22,6 @@ public class BrowActivity extends AppCompatActivity {
         webView = findViewById(R.id.bop_webview);
         webView.getSettings().setJavaScriptEnabled(true);//设置支持 js
         webView.setWebChromeClient(new WebChromeClient() {});// 使用这个可以让alert可以弹出
-        webView. loadUrl(urlBase+"just.html");
+        webView. loadUrl(urlBase+ "example.html");
     }
 }

@@ -1,1 +1,1 @@
-include ':app', ':browsable_open_app'
+include ':app', ':browsable_open_app', ':camera'

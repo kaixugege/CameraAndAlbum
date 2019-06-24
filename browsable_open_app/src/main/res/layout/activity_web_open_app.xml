@@ -9,8 +9,11 @@
 
     <TextView
         android:id="@+id/webmsssage_boa"
-        android:text="这是个从web进入的界面"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <WebView
+        android:id="@+id/webmsssage_mygit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
 
 </LinearLayout>

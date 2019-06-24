@@ -1,4 +1,4 @@
-package com.xugege.cameraandalbum;
+package com.xugege.camera;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -50,7 +50,7 @@ public class ContentActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (data==null)
         {
-            Toast.makeText(this, "Intent 为空拉" , Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Intent 为空啦" , Toast.LENGTH_LONG).show();
             return;
 
         }
