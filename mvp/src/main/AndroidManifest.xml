@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xugege.my.mvp">
+
+    <application>
+        <activity android:name=".mvp_two.MvpTwoActivity"></activity>
+        <activity android:name=".mvp_one.MvpLoginActivity" />
+        <activity android:name=".MvpActivity" />
+    </application>
+
+</manifest>

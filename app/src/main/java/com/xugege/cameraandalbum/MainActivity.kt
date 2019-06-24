@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.xugege.camera.ContentActivity
 import com.xugege.example.browsable_open_app.BrowActivity
+import com.xugege.my.mvp.MvpActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,5 +22,7 @@ class MainActivity : AppCompatActivity() {
     fun next(view: View) {
         startActivity(Intent(this, ContentActivity::class.java))
     }
-
+    fun mvp(view: View) {
+        startActivity(Intent(this, MvpActivity::class.java))
+    }
 }
