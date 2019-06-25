@@ -13,8 +13,8 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
     @Override
     public void testGetMpresenter() {
         Log.d("print", "我是P层的引用");
+        mView.testGetMview();
         try {
-            mView.testGetMview();
 
         }
         catch (Exception ex){
